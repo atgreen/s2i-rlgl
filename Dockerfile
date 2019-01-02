@@ -7,6 +7,5 @@ LABEL io.k8s.description="Base image for rlgl-server." \
       io.openshift.tags="s2i-rlgl"
 
 USER 0
-RUN dnf -y git
-RUN dnf -y clean all
+RUN yum -y git && yum -y clean all
 USER 1001
